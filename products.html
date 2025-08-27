@@ -13,29 +13,47 @@
         <h1 class="text-2xl">
             Greenden
         </h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-7 h-7 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-7 h-7 cursor-pointer md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         <ul class=" gap-5 text-gray-600 hidden md:flex">
             <li >
-                <a class="hover:underline text-black" href="index.html">Home</a>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
             </li>
             <li>
-                <a class="hover:underline text-black" href="products.html">Products</a>
+                <a class="hover:underline hover:text-black" href="products.html">Products</a>
             </li>
             <li>
-                <a class="hover:underline text-black" href="contact.html">Contact</a>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
             </li>
         </ul>
     </nav>
 
+       <!--side navbar-->
+       <div id="sidenav" class="bg-green-100 fixed  z-20 top-0 right-0 transition-all duration-1000"style="width: 180px; height: 100%; right: -180px;">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer font-bold">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600 ">
+            <li >
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="products.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
     <!--products-->
     <div class="text-center ">
         <h1 class="font-bold text-4xl  mt-8">Our Products</h1>
-        <input type="text" class="border border-black m-4 p-2 w-4/5  inline"  placeholder="Search plants..." >
+        <input id="search" type="text" class="border border-black m-4 p-2 w-4/5  inline"  placeholder="Search plants..." >
     </div>
    
-    <div class="grid grid-cols-2 mt-8 gap-5 md:grid-cols-4 text-center m-4">
+    <div id="productcontainer" class="grid grid-cols-2 mt-8 gap-5 md:grid-cols-4 text-center m-4">
         <div>
             <img src="./images/1.png" class="inline border border-black hover:shadow-xl transform hover:-translate-y-2 mt-5 cursor-pointer" alt="Monstera Deliciosa">
             <h1 class="font-bold">Monstera Deliciosa</h1>
@@ -85,5 +103,6 @@
         <p>&copy; 2025 greenday.com</p>
     </section>
 
+    <script src="products.js"></script>
 </body>
 </html>
